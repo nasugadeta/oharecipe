@@ -29,6 +29,7 @@ class RecipesController < ApplicationController
       :explain,
       :admin_id,
       :restaurant_id,
-      :cook)
+      :cook
+      :pic)
   end
 end
