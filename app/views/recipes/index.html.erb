@@ -1,4 +1,3 @@
-<h3>レシピ一覧</h3>
 <hr>
 <%= @recipes.each do |recipe| %>
 <p>料理名：<%= link_to recipe.name, recipe_path(recipe) %></p>
