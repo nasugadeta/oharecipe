@@ -5,8 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= link_to "おしゃレシピ", recipes_path, class: "btn btn-warning" %>
-  <h3><%= link_to "レストラン一覧", restaurants_path, class: "btn btn-info" %></h3>
+  <h1>♪おしゃレシピ♬</h1>
+  <h3>あなたの毎日にオシャレなお店のカフェごはん！</h3>
+  <%= link_to "レシピ一覧", recipes_path, class: "btn btn-warning" %>
+  <%= link_to "レストラン一覧", restaurants_path, class: "btn btn-info" %>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -23,11 +25,11 @@
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できます -->
-      <strong><%= current_user.email %></strong>でログインしています。<br>
+      <br><strong><%= current_user.email %></strong>でログインしています。
       <%= link_to 'プロフィール変更', edit_user_registration_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to "ユーザー登録", new_user_registration_path %> |
+      <br><%= link_to "ユーザー登録", new_user_registration_path %> |
       <%= link_to "ユーザーログイン", new_user_session_path %>
     <% end %>
   </nav>
@@ -38,11 +40,11 @@
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できます -->
-      <strong><%= current_admin.email %></strong>でログインしています。<br>
+      <br><strong><%= current_admin.email %></strong>でログインしています。
       <%= link_to 'Admin情報変更', edit_admin_registration_path %> |
       <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Admin登録", new_admin_registration_path %> |
+      <br><%= link_to "Admin登録", new_admin_registration_path %> |
       <%= link_to "Adminログイン", new_admin_session_path %>
     <% end %>
   </nav>
