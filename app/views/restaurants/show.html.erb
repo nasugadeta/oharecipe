@@ -1,9 +1,12 @@
 <h3><%= @restaurant. name %>の店舗情報！</h3>
+<img src=<%= @restaurant.pic %> height="200" width="300" >
 <p>住所:<%= @restaurant.address %></p>
 <p>メモ：<%= @restaurant.explain %></p>
 <p>この店のレシピ</p>
+<hr>
 <%= @restaurant.recipes.each do |recipe| %>
 <ul>
   <li><%= link_to recipe.name, recipe_path(recipe) %></li>
 </ul>
+<hr>
 <% end %>
