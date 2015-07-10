@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
     #user新規登録
     devise_parameter_sanitizer.for(:sign_up) << :family_name
     devise_parameter_sanitizer.for(:sign_up) << :given_name
-    #user編集
-    # devise_parameter_sanitizer.for(:edit) << :family_name
-    # devise_parameter_sanitizer.for(:edit) << :given_name
+    # user編集
+    devise_parameter_sanitizer.for(:account_update) << :family_name
+    devise_parameter_sanitizer.for(:account_update) << :given_name
   end
 end
