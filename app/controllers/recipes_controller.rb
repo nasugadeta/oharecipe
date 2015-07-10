@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-  class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
   end
@@ -31,5 +30,4 @@ class RecipesController < ApplicationController
       :admin_id,
       :restaurant_id)
   end
-end
 end
