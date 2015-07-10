@@ -4,6 +4,6 @@
 <p>この店のレシピ</p>
 <%= @restaurant.recipes.each do |recipe| %>
 <ul>
-  <li><%= recipe.name %></li>
+  <li><%= link_to recipe.name, recipe_path(recipe) %></li>
 </ul>
 <% end %>
