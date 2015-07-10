@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.page(params[:page]).per(2)
   end
   def edit
     @restaurant = Restaurant.find(params[:id])

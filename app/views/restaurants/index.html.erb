@@ -1,3 +1,4 @@
 <%= @restaurants.each do |restaurant| %>
 <hr><%= link_to restaurant.name, restaurant_path(restaurant) %><hr>
 <% end %>
+<%= paginate @restaurants %>
