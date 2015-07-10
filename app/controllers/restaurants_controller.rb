@@ -29,6 +29,7 @@ class RestaurantsController < ApplicationController
       :address,
       :explain,
       :tel,
-      :pic)
+      :pic,
+      :admin_id)
   end
 end
