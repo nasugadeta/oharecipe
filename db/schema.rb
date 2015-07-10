@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150710091819) do
+ActiveRecord::Schema.define(version: 20150710143908) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,7 +53,10 @@ ActiveRecord::Schema.define(version: 20150710091819) do
     t.string   "tel"
     t.string   "address"
     t.string   "pic"
+    t.integer  "admin_id"
   end
+
+  add_index "restaurants", ["admin_id"], name: "index_restaurants_on_admin_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
