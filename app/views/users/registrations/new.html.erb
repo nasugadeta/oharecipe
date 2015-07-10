@@ -4,17 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label "名字" %><br />
-    <%= f.text_field :family_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label "名前" %><br />
-    <%= f.text_field :given_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label "メールアドレス" %><br />
+    <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -36,4 +26,4 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "users/shared/links" %>
