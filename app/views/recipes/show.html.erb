@@ -1,4 +1,5 @@
 <hr>
 <h3><%= @recipe.name %>のレシピ</h3>
 <p>メモ：<%= @recipe.explain %></p>
+<p><%= link_to @recipe.restaurant.name, restaurant_path(@recipe.restaurant_id) %>のレシピです！</p>
 <hr>
