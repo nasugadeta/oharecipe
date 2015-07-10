@@ -10,4 +10,7 @@
 </ul>
 <hr>
 <% end %>
+
+<% if current_admin.id == @restaurant.admin_id %>
 <%= link_to "レストラン情報を編集する", edit_restaurant_path(@restaurant) %>
+<% end %>
