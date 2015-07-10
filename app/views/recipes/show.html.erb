@@ -5,6 +5,8 @@
 <p>作り方：<%= @recipe.cook %></p>
 <p><%= link_to @recipe.restaurant.name, restaurant_path(@recipe.restaurant_id) %>のレシピです！</p>
 <hr>
+<% if admin_signed_in? %>
 <% if current_admin.id == @recipe.admin_id %>
 <%= link_to "このレシピを編集する", edit_recipe_path(@recipe) %>
+<% end %>
 <% end %>
