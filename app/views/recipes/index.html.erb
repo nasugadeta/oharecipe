@@ -1,5 +1,8 @@
 <hr>
+
 <%= @recipes.each do |recipe| %>
 <p>料理名：<%= link_to recipe.name, recipe_path(recipe) %></p>
 <hr>
 <% end %>
+
+<%= paginate @recipes %>

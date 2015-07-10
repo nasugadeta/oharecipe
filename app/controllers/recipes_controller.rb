@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
     redirect_to "/"
   end
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.page(params[:page]).per(5)
   end
   def edit
     @recipe = Recipe.find(params[:id])
