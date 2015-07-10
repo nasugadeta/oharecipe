@@ -5,6 +5,16 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+      case resource
+      when User
+        recipes_path
+      when Admin
+        restaurant_path(current_admin.id)
+      end
+  end
+
+
   protected
   def configure_permitted_parameters
     #user新規登録
