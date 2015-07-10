@@ -1,0 +1,30 @@
+<%= form_for @recipe do |f| %>
+  <% if @recipe.errors.any? %>
+    <div class="alert alert-danger">
+      <p><b><%= @recipe.errors.count %>件のエラーがあります</b></p>
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class ="form-group">
+    <%= f.label :name, "料理名" %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class ="form-group">
+    <%= f.label "説明" %><br>
+    <%= f.text_field :explain, class: "form-control" %>
+  </div>
+  <div class ="form-group">
+    <%= f.label "レストランID" %><br>
+    <%= f.number_field :restaurant_id, class: "form-control" %>
+  </div>
+  <div class ="form-group">
+    <%= f.label "Admin_Id" %><br>
+    <%= f.number_field :admin_id, class: "form-control" %>
+  </div>
+  <%= f.submit %>
+<% end %>
